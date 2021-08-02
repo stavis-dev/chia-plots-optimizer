@@ -53,24 +53,24 @@ def calc_chia_plots(disc_size: int) -> dict:
                 k34_count_k32_plots = k32Count
                 k34_count_k33_plots = k33Count
                 k34_count_k34_plots = k34Count
-                k34_space_used = round(usedSpaceInGb, 3)
+                k34_space_used = usedSpaceInGb
             k33Count += 1
 
     plot_plan = {
         'k32': {
             'number_k32': k32_count_k32_plots,
-            'space_used': k32_space_used,
+            'space_used': round(k32_space_used, 3)
                 },
         'k33': {
             'number_k32': k33_count_k32_plots,
             'number_k33': k33_count_k33_plots,
-            'space_used': k33_space_used,
+            'space_used': round(k33_space_used, 3)
                         },
         'k34': {
             'number_k32': k34_count_k32_plots,
             'number_k33': k34_count_k33_plots,
             'number_k34': k34_count_k34_plots,
-            'space_used': k34_space_used,
+            'space_used': round(k34_space_used, 3)
                         },
             }
     return plot_plan
