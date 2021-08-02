@@ -8,7 +8,20 @@
 ## Как пользоваться
 
 Программа считает плоты в Гигабайтах (GB) (Пожалуйста не путайте с Гибибайтами GiB).
-Чтоб увидеть размер диска:
+Чтоб увидеть размер диска в Гигабайтах:
+
+```bash
+#  для текущей папки
+df -BGB .
+
+# покажет что то типа
+
+user@chiaserver:~/plt/12tb/addplots$ df -BGB .
+Filesystem     1GB-blocks    Used Available Use% Mounted on
+/dev/sdb1         12001GB 11573GB     428GB  97% /home/user/plt/12tb
+```
+
+Работа со скриптом:
 
 ```bash
 # клонировать репу
@@ -34,16 +47,4 @@ Enter the Free space on the hard disk in GB: 12001
 110      0       0       11972.07 GB (≈99.76%) 
 67       21      0       12000.846 GB (≈100.0%) 
 67       21      0       12000.846 GB (≈100.0%) 
-```
-
-
-```bash
-#  для текущей папки
-df -BGB .
-
-# покажет что то типа
-
-user@chiaserver:~/plt/12tb/addplots$ df -BGB .
-Filesystem     1GB-blocks    Used Available Use% Mounted on
-/dev/sdb1         12001GB 11573GB     428GB  97% /home/user/plt/12tb
 ```
